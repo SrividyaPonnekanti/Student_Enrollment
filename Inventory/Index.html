@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>-->
+
+
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2018.2.620/styles/kendo.common-material.min.css" />
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2018.2.620/styles/kendo.material.min.css" />
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2018.2.620/styles/kendo.material.mobile.min.css" />
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2018.2.620/styles/kendo.common-material.min.css" />
+    <link href="Content/Site.css" rel="stylesheet" />
+    <script data-main="Scripts/Files/configuration" src="Scripts/require.js"></script>
+</head>
+
+<body style="padding-top:10px;">
+    <div style="text-align: center; color: rgb(14, 64, 106)">
+        <h2>Welcome to Entroll Hub</h2>
+    </div>
+    <nav class="navbar navbar-expand-sm bg-warning navbar-dark" style="background-color: #f1c40f;">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="#/Home" style="padding-top:0px;padding-bottom:0px;">
+                    <img src="Content/Images/Home.jpg" style="width:40px;padding-top: 5px;"/>
+                        <div id="lblHome">
+                        <lable class="fontweight_bold text_color3 fontsize_11 margin_0px cursor_pointer">Home</lable>
+                        </div>
+                    </li>
+                <li>
+                    
+                    <a href="#/EntrollStudent" style="padding-top:0px;padding-bottom:0px;">
+                        <img src="Content/Images/entroll.png" style="width: 40px;padding-top: 5px;margin-left: 8px;"/></a>
+                     <div id="Div2">
+                         <span href="#/EntrollStudent" id="spnEntrollStudnet" style="margin-left:20px;">Entroll Student</span>
+                        </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="divsuccessmsg" name="divsuccessmsg" style="display:none">
+    <label id="lblSuccessMsg" style="margin-left:575px;margin-bottom:20px; color:forestgreen;" name="lblSuccessMsg"></label>
+    </div>
+
+    <div id="Imgprogressbar" style="display:none;">
+        <img src="Content/Images/spinner.gif" style="width:90px;margin-left: 600px;"/>
+    </div>
+    <div id="page" class="container" style="height:auto">
+        <img src="Content/Images/StudentEntrollment.jpg" style="width:100%!important;"/>
+    </div>
+    <div id="diverrormsg" name="diverrormsg" style="display:none">
+    <label id="lblerrorMsg" style="margin-bottom:20px; margin-left:600px; color:red;" name="lblerrorMsg"></label>
+    </div>
+    <footer style="height:auto">
+        <div style="text-align: center; color: rgb(14, 64, 106);; ">
+            <div style="margin-top:15px;"></div>
+            <nav class="navbar navbar-expand-sm bg-warning navbar-dark" style="background-color: #f1c40f ">
+                <h3>Terms and Conditions</h3>
+            </nav>
+        </div>
+
+    </footer>
+</body>
+</html>

@@ -1,0 +1,159 @@
+﻿<div class="container">
+    <div style="color:blue;">
+        <h3>Add Inventory</h3>
+      <!--<lable id="lblMsg" name="lblMsg">Quantity</lable>-->
+    </div>
+    <div id="divsuccessmsg" name="divsuccessmsg" style="display:none">
+    <label id="lblSuccessMsg" style="margin-left:175px;margin-bottom:20px; color:darkblue;" name="lblSuccessMsg"></label>
+    </div>
+    <div id="diverrormsg" name="diverrormsg" style="display:none">
+    <label id="lblerrorMsg" style="margin-bottom:20px; color:red;" name="lblerrorMsg">No Records Found</label>
+    </div>
+    <div style="margin-left:160px; margin-bottom:10px;">
+        <div class="col-sm-9 col-md-9 col-lg-5 mx-auto">
+            {{#if InventoryItemId}}
+            <div class="row align-items-center">
+                <div class="col-sm-5 font-weight-bold">
+                    <label for="InvNumber" class="control-label">InventoryNumber</label>
+                    <strong class="text-danger">*</strong>
+                </div>
+                <div class="col-sm-1">
+                    <strong>:</strong>
+                </div>
+                <div class="col-sm-6 ">
+                    <input type="text" value="{{InventoryNumber}}" class="form-control" id="txtInvNumber" name="InventoryNumber" placeholder="Enter InventoryNumber" required="" />
+                    <span id="spInventoryNumber" style="display:none">InventoryNumber is Mandatory</span>
+                </div>
+            </div>
+            <br />
+            <div class="row align-items-center">
+                <div class="col-sm-5 font-weight-bold">
+                    <label for="InvName" class="control-label">Name</label>
+                    <strong class="text-danger">*</strong>
+                </div>
+                <div class="col-sm-1">
+                    <strong>:</strong>
+                </div>
+                <div class="col-sm-6 ">
+                    <input type="text" value="{{Name}}" class="form-control" id="txtInvName" name="Name" placeholder="Enter Name" required="" />
+                    <span id="spName" style="display:none">Name is Mandatory</span>
+                </div>
+            </div>
+            <br />
+            <div class="row align-items-center">
+                <div class="col-sm-5 font-weight-bold">
+                    <label for="InvQuantity" class="control-label">Quantity</label>
+                    <strong class="text-danger">*</strong>
+                </div>
+                <div class="col-sm-1">
+                    <strong>:</strong>
+                </div>
+                <div class="col-sm-6 ">
+                    <input type="number" value="{{Quantity}}" class="form-control" id="txtInvQuantity" name="Quantity" placeholder="Enter Quantity" required="" />
+                    <span id="spQuantity" style="display:none">Quantity is Mandatory</span>
+                </div>
+            </div>
+            <br />
+            <div class="row align-items-center">
+                <div class="col-sm-5 font-weight-bold">
+                    <label for="InvLowwatermark" class="control-label">Lowwatermark</label>
+                </div>
+                <div class="col-sm-1">
+                    <strong>:</strong>
+                </div>
+                <div class="col-sm-6 ">
+                    <input type="number" value="{{Lowwatermark}}" class="form-control" id="txtLowwatermark" name="Lowwatermark" placeholder="Enter Lowwatermark" required="" />
+                    <span id="spLowwatermark" style="display:none">Lowwatermark is Mandatory</span>
+                </div>
+            </div>
+            <br />
+            <div class="row mb-3 mr-1 align-items-center">
+                <div class="col-sm-5 font-weight-bold">
+                </div>
+                <div class="col-sm-1">
+                </div>
+                <div class="col-sm-6">
+                    <input type="button" id="btnsubmit" name="btnsubmit" value="Save" class="btn btn-primary" />
+                    <button type="button" value="reset" id="btnCancel" name="btnCancel" class="btn btn-danger">Cancel</button>
+
+                </div>
+            </div>
+          
+            {{else}}
+            
+            <div class="row align-items-center">
+                <div class="col-sm-5 font-weight-bold">
+                    <label for="InvNumber" class="control-label">InventoryNumber</label>
+                    <strong class="text-danger">*</strong>
+                </div>
+                <div class="col-sm-1">
+                    <strong>:</strong>
+                </div>
+                <div class="col-sm-6 ">
+                    <input type="text" class="form-control" id="txtInvNumber" name="InventoryNumber" placeholder="Enter InventoryNumber" required="" />
+                    <span id="spInventoryNumber" style="display:none">InventoryNumber is Mandatory</span>
+                </div>
+            </div>
+            <br />
+            <div class="row align-items-center">
+                <div class="col-sm-5 font-weight-bold">
+                    <label for="InvName" class="control-label">Name</label>
+                    <strong class="text-danger">*</strong>
+                </div>
+                <div class="col-sm-1">
+                    <strong>:</strong>
+                </div>
+                <div class="col-sm-6 ">
+                    <input type="text" class="form-control" id="txtInvName" name="Name" placeholder="Enter Name" required="" />
+                    <span id="spName" style="display:none">Name is Mandatory</span>
+                </div>
+            </div>
+            <br />
+            <div class="row align-items-center">
+                <div class="col-sm-5 font-weight-bold">
+                    <label for="InvQuantity" class="control-label">Quantity</label>
+                    <strong class="text-danger">*</strong>
+                </div>
+                <div class="col-sm-1">
+                    <strong>:</strong>
+                </div>
+                <div class="col-sm-6 ">
+                    <input type="number" class="form-control" id="txtInvQuantity" name="Quantity" placeholder="Enter Quantity" required="" />
+                    <span id="spQuantity" style="display:none">Quantity is Mandatory</span>
+                </div>
+            </div>
+            <br />
+            <div class="row align-items-center">
+                <div class="col-sm-5 font-weight-bold">
+                    <label for="InvLowwatermark" class="control-label">Lowwatermark</label>
+                </div>
+                <div class="col-sm-1">
+                    <strong>:</strong>
+                </div>
+                <div class="col-sm-6 ">
+                    <input type="number" class="form-control" id="txtLowwatermark" name="Lowwatermark" placeholder="Enter Lowwatermark" required="" />
+                    <span id="spLowwatermark" style="display:none">Lowwatermark is Mandatory</span>
+                </div>
+            </div>
+            <br />
+            <div class="row mb-3 mr-1 align-items-center">
+                <div class="col-sm-5 font-weight-bold">
+                </div>
+                <div class="col-sm-1">
+                </div>
+                <div class="col-sm-6 ">
+                    <input type="button" id="btnsubmit" name="btnsubmit" value="Save" class="btn btn-primary" />
+                    <input type="button" id="btnCancel" name="btnCancel" value="Cancel" class="btn btn-danger" />
+                </div>
+            </div>
+          
+          {{/if}}
+        </div>
+    </div>
+    <style>
+        .control-label {
+            font-weight: normal
+        }
+    </style>
+
+</div>

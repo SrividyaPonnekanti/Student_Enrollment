@@ -1,0 +1,230 @@
+﻿  <div class="container">
+    <div style="color:rgb(14, 64, 106);">
+      <h3>Student Enrollment</h3>
+    </div>
+    
+    <div id="divsuccessmsg" name="divsuccessmsg" style="display:none">
+      <label id="lblSuccessMsg" style="margin-left:575px;margin-bottom:20px; color:forestgreen;" name="lblSuccessMsg"></label>
+    </div>
+    <div id="diverrormsg" name="diverrormsg" style="display:none">
+      <label id="lblerrorMsg" style="margin-bottom:20px; color:red;" name="lblerrorMsg"></label>
+    </div>
+    <div style="margin: 15px 0 10px 160px;">
+      <div class="col-sm-9 col-md-9 col-lg-5 mx-auto">
+
+        {{#if studentId}}
+
+        <div class="row align-items-center">
+          <div class="col-sm-5 font-weight-bold">
+            <label for="StudentName" class="control-label">Name</label>
+            <strong class="text-danger">*</strong>
+          </div>
+          <div class="col-sm-1">
+            <strong>:</strong>
+          </div>
+          <div class="col-sm-6">
+            <input type="text" value="{{name}}" class="form-control" id="txtName" name="Name" placeholder="Enter Name" required=""/>
+            <span id="spnName" style="display:none;width:200px;">Enter Student Name</span>
+          </div>
+        </div>
+        <br />
+          <div class="row align-items-center">
+                 <div class="col-sm-5 font-weight-bold">
+                     <label for="file" class="control-label">Date Of Birth</label>
+                     <strong class="text-danger">*</strong>
+                 </div>
+                 <div class="col-sm-1">
+                     <strong>:</strong>
+                 </div>
+                 <div class="col-sm-6">
+                     <input type="date" class="form-control" value={{dateOfBirth}} id="dobDate" name="dobDate" required="" placeholder="MM-DD-YYYY" readonly/>
+                     <span id="spndobDate" style="display:none;width:200px;">Enter Date Of Birth</span>
+                 </div>
+             </div>
+            <br />
+             <div class="row align-items-center">
+                <div class="col-sm-5 font-weight-bold">
+                  <label for="StudentUC" class="control-label">University Course</label>
+                  <strong class="text-danger">*</strong>
+                </div>
+                <div class="col-sm-1">
+                  <strong>:</strong>
+                </div>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" value="{{universityCourse}}" id="txtUC" name="UniversityCourse" placeholder="Enter University Course" required="" readonly/>
+                  <span id="spnUC" style="display:none;width:200px;">Enter University Course</span>
+                </div>
+              </div>   
+                <br />
+           <div class="row align-items-center">
+             <div class="col-sm-5 font-weight-bold">
+                 <label for="file" class="control-label">Start Date</label>
+                 <strong class="text-danger">*</strong>
+             </div>
+             <div class="col-sm-1">
+                 <strong>:</strong>
+             </div>
+             <div class="col-sm-6">
+                 <input type="date" class="form-control" value={{startDate}} id="startDate" name="startDate" required="" placeholder="MM-DD-YYYY" readonly/>
+                 <span id="spnstartDate" style="display:none;width:200px;">Enter Start Date</span>
+             </div>
+         </div>
+           <br />
+             <div class="row align-items-center">
+            <div class="col-sm-5 font-weight-bold">
+                <label for="file" class="control-label">End Date</label>
+                <strong class="text-danger">*</strong>
+            </div>
+            <div class="col-sm-1">
+                <strong>:</strong>
+            </div>
+            <div class="col-sm-6">
+                <input type="date" class="form-control" value={{endDate}} id="endDate" name="endDate" required="" placeholder="MM-DD-YYYY" readonly/>
+                <span id="spnendDate" style="display:none;width:200px;">Enter End Date</span>
+            </div>
+        </div>
+          <br />
+         <div class="row align-items-center">
+               <div class="col-sm-5 font-weight-bold">
+                 <label for="lblWelshLangProficiency" class="control-label">Welsh language proficiency</label>
+               </div>
+               <div class="col-sm-1">
+                 <strong>:</strong>
+               </div>
+               <div class="col-sm-6 ">
+                 <select id="WelshLangProficiency" name="WelshLangProficiency" value="{{welshLanguageProficiency}}>
+                     <option value="1">Fluent</option>
+                     <option value="2">Interact with other welsh speakers</option>
+                     <option value="3">Use basic expressions</option>
+                     <option value="4">None</option>
+                 </select>
+                 <span id="spnWelshLangProficiency" style="display:none;width:200px;">Please Enter Welsh language proficiency</span>
+               </div>
+             </div>
+             <br />
+        <br />
+        <br />
+        <div class="row mb-3 mr-1 align-items-center">
+          <div class="col-sm-5 font-weight-bold">
+          </div>
+          <div class="col-sm-1">
+          </div>
+          <div class="col-sm-6">
+            <input type="button" id="btnsubmit" name="btnsubmit" value="Save" class="btn btn-primary" />
+            <button type="button" value="reset" id="btnCancel" name="btnCancel" class="btn btn-danger">Cancel</button>
+            
+          </div>
+        </div>
+
+        {{else}}
+
+        <div class="row align-items-center">
+          <div class="col-sm-5 font-weight-bold">
+            <label for="StudentName" class="control-label">Name</label>
+            <strong class="text-danger">*</strong>
+          </div>
+          <div class="col-sm-1">
+            <strong>:</strong>
+          </div>
+          <div class="col-sm-6">
+            <input type="text" class="form-control" id="txtName" name="Name" placeholder="Enter Name" required="" />
+            <span id="spnName" style="display:none;width:200px;">Enter Student Name</span>
+          </div>
+        </div>
+        <br />
+           <div class="row align-items-center">
+             <div class="col-sm-5 font-weight-bold">
+                 <label for="file" class="control-label">Date Of Birth</label>
+                 <strong class="text-danger">*</strong>
+             </div>
+             <div class="col-sm-1">
+                 <strong>:</strong>
+             </div>
+             <div class="col-sm-6">
+                 <input type="date" class="form-control"  id="dobDate" name="dobDate" required="" placeholder="MM-DD-YYYY"/>
+                 <span id="spndobDate" style="display:none;width:200px;">Enter Date Of Birth</span>
+             </div>
+         </div>
+        <br />
+         <div class="row align-items-center">
+            <div class="col-sm-5 font-weight-bold">
+              <label for="StudentUC" class="control-label">University Course</label>
+              <strong class="text-danger">*</strong>
+            </div>
+            <div class="col-sm-1">
+              <strong>:</strong>
+            </div>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" id="txtUC" name="UniversityCourse" placeholder="Enter University Course" required="" />
+              <span id="spnUC" style="display:none;width:200px;">Enter University Course</span>
+            </div>
+          </div>   
+            <br />
+           <div class="row align-items-center">
+             <div class="col-sm-5 font-weight-bold">
+                 <label for="file" class="control-label">Start Date</label>
+                 <strong class="text-danger">*</strong>
+             </div>
+             <div class="col-sm-1">
+                 <strong>:</strong>
+             </div>
+             <div class="col-sm-6">
+                 <input type="date" class="form-control"  id="startDate" name="startDate" required="" placeholder="MM-DD-YYYY"/>
+                 <span id="spnstartDate" style="display:none;width:200px;">Enter Start Date</span>
+             </div>
+         </div>
+           <br />
+             <div class="row align-items-center">
+            <div class="col-sm-5 font-weight-bold">
+                <label for="file" class="control-label">End Date</label>
+                <strong class="text-danger">*</strong>
+            </div>
+            <div class="col-sm-1">
+                <strong>:</strong>
+            </div>
+            <div class="col-sm-6">
+                <input type="date" class="form-control"  id="endDate" name="endDate" required="" placeholder="MM-DD-YYYY"/>
+                <span id="spnendDate" style="display:none;width:200px;">Enter End Date</span>
+            </div>
+        </div>
+          <br />
+        <div class="row align-items-center">
+          <div class="col-sm-5 font-weight-bold">
+           <label for="lblWelshLangProficiency" class="control-label">Welsh language proficiency</label>
+          </div>
+          <div class="col-sm-1">
+            <strong>:</strong>
+          </div>
+          <div class="col-sm-6 ">
+            <select id="WelshLangProficiency" name="WelshLangProficiency">
+                <option value="1">Fluent</option>
+                <option value="2">Interact with other welsh speakers</option>
+                <option value="3">Use basic expressions</option>
+                <option value="4">None</option>
+            </select>
+            <span id="spnWelshLangProficiency" style="display:none;width:200px;">Please Enter Welsh language proficiency</span>
+          </div>
+        </div>
+        <br />
+        <br />
+        <div class="row mb-3 mr-1 align-items-center">
+          <div class="col-sm-5 font-weight-bold">
+          </div>
+          <div class="col-sm-1">
+          </div>
+          <div class="col-sm-6">
+            <input type="button" id="btnsubmit" name="btnsubmit" value="Save" class="btn btn-primary" />
+            <button type="button" value="reset" id="btnCancel" name="btnCancel" class="btn btn-danger">Cancel</button>
+          </div>
+        </div>
+        {{/if}}
+
+      </div>
+    </div>
+
+    <style>
+      .control-label {
+      font-weight: normal
+      }
+    </style>
+  </div>
